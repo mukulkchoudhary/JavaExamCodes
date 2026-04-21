@@ -7,7 +7,7 @@ public class Hostel {
     protected String hostelLocation;
     protected int noOfRooms;
     
-    public void getHostelData() {
+    public void getData() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter hostel name: ");
         hostelName = sc.nextLine();
@@ -17,7 +17,7 @@ public class Hostel {
         noOfRooms = sc.nextInt();
     }
     
-    public void printHostelData() {
+    public void printData() {
         System.out.println("Hostel Name: " + hostelName);
         System.out.println("Hostel Location: " + hostelLocation);
         System.out.println("Number of Rooms: " + noOfRooms);
