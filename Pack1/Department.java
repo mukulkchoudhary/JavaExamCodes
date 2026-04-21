@@ -1,6 +1,9 @@
 package Pack1;
 
 public interface Department {
-    void getDepartmentData();
-    void printDepartmentData();
+    String depName;
+    String depHead;
+    
+    void getData();
+    void printData();
 }
