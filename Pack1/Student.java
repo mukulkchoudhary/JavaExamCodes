@@ -8,7 +8,26 @@ public class Student extends Hostel implements Department {
     private String electiveSubject;
     private double avgMarks;
     
-    public void getData() {
+    // Department attributes stored here
+    private String depName;
+    private String depHead;
+    
+    // Implementing Department interface methods
+    public void getDepartmentData() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter department name: ");
+        depName = sc.nextLine();
+        System.out.print("Enter department head: ");
+        depHead = sc.nextLine();
+    }
+    
+    public void printDepartmentData() {
+        System.out.println("Department Name: " + depName);
+        System.out.println("Department Head: " + depHead);
+    }
+    
+    // Student's own methods
+    public void getStudentData() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter student name: ");
         studentName = sc.nextLine();
@@ -21,22 +40,30 @@ public class Student extends Hostel implements Department {
         avgMarks = sc.nextDouble();
     }
     
-    public void printData() {
+    public void printStudentData() {
         System.out.println("Student Name: " + studentName);
         System.out.println("Registration Number: " + regNo);
         System.out.println("Elective Subject: " + electiveSubject);
         System.out.println("Average Marks: " + avgMarks);
-        System.out.println("Department Name: " + depName);
-        System.out.println("Department Head: " + depHead);
     }
     
-    public void getStudentData() {
+    // Combined method to get ALL data
+    public void getAllData() {
+        System.out.println("\n--- Enter Hostel Details ---");
         getHostelData();
-        getData();
+        System.out.println("\n--- Enter Student Details ---");
+        getStudentData();
+        System.out.println("\n--- Enter Department Details ---");
+        getDepartmentData();
     }
     
-    public void printStudentData() {
+    // Combined method to print ALL data
+    public void printAllData() {
+        System.out.println("\n===== HOSTEL INFORMATION =====");
         printHostelData();
-        printData();
+        System.out.println("\n===== STUDENT INFORMATION =====");
+        printStudentData();
+        System.out.println("\n===== DEPARTMENT INFORMATION =====");
+        printDepartmentData();
     }
 }
