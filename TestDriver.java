@@ -5,10 +5,16 @@ public class TestDriver {
     public static void main(String[] args) {
         Student s = new Student();
         
-        System.out.println("===== Enter Student Details =====");
-        s.getStudentData();
+        System.out.println("===== ENTER HOSTEL DETAILS =====");
+        s.getData();
         
-        System.out.println("\n===== Student Information =====");
-        s.printStudentData();
+        System.out.println("\n===== ENTER STUDENT AND DEPARTMENT DETAILS =====");
+        s.getData();
+        
+        System.out.println("\n===== HOSTEL INFORMATION =====");
+        s.printData();
+        
+        System.out.println("\n===== STUDENT AND DEPARTMENT INFORMATION =====");
+        s.printData();
     }
 }
